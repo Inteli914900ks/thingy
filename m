@@ -11,10 +11,10 @@ end
 
 local lowertorso = hum.Parent:WaitForChild("LowerTorso")
 
-if t == true then 
+if tail == true then 
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Inteli914900ks/thingy/refs/heads/main/t"))()
 end
 
-if w == true then
+if wag == true then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Inteli914900ks/thingy/refs/heads/main/w"))()
 end
