@@ -1,6 +1,3 @@
-local tail = true
-local wag = true
-
 local hum = game.Players.LocalPlayer.Character:WaitForChild("Humanoid")
 
 if hum.RigType ~= Enum.HumanoidRigType.R15 then
@@ -14,10 +11,10 @@ end
 
 local lowertorso = hum.Parent:WaitForChild("LowerTorso")
 
-if tail == true then 
+if t == true then 
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Inteli914900ks/thingy/refs/heads/main/t"))()
 end
 
-if wag == true then
+if w == true then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Inteli914900ks/thingy/refs/heads/main/w"))()
 end
