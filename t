@@ -4,6 +4,17 @@ local chr = plr.Character
 local RunService = game:GetService("RunService")
 local Players = game:GetService("Players")
 
+local torso
+local C1
+
+if chr.Humanoid.RigType ~= Enum.HumanoidRigType.R15 then
+    torso = "Torso"
+    C1 = chr.Torso.WaistBackAttachment.CFrame.Position
+else
+    torso = "LowerTorso"
+    C1 = Vector3.new(-0, -0.2, 0.5)
+end
+
 local accessory = Instance.new("Accessory")
 accessory.AttachmentPoint = CFrame.new(0, 0.562, -1.179)
 accessory.Name = "Tail"
@@ -19,9 +30,9 @@ handle.Parent = accessory
 local weld = Instance.new("Weld")
 weld.Parent = handle
 weld.Part0 = handle
-weld.Part1 = chr:WaitForChild("LowerTorso")
+weld.Part1 = chr:WaitForChild(torso)
 weld.C0 = CFrame.new(0, 0.562, -1.179)
-weld.C1 = CFrame.new(-0, -0.2, 0.5)
+weld.C1 = CFrame.new(C1)
 weld.Name = "AccessoryWeld"
 
 local attachment = Instance.new("Attachment")
